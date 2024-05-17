@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include "catch_amalgamated.hpp"
-#include "student.h" 
+#include "sources/student.h" 
 
 TEST_CASE("Student Constructor and Property Tests", "[Student]") {
     // Default Constructor Test
@@ -42,6 +42,8 @@ TEST_CASE("Student Constructor and Property Tests", "[Student]") {
         REQUIRE(movedTo.getLastName() == "Doe");
         REQUIRE(movedTo.getGrades() == vector<int>{10, 9, 8});
         REQUIRE(movedTo.getFinalExamGrade() == 7);
+        REQUIRE(movedTo.getMedian() == 9.5);
+        REQUIRE(movedTo.getAverage() == 9.0);
         REQUIRE(original.getFirstName().empty()); 
         REQUIRE(original.getLastName().empty());   
         REQUIRE(original.getGrades().empty());     
@@ -74,6 +76,8 @@ TEST_CASE("Student Constructor and Property Tests", "[Student]") {
         REQUIRE(movedTo.getLastName() == "Doe");
         REQUIRE(movedTo.getGrades() == vector<int>{10, 9, 8});
         REQUIRE(movedTo.getFinalExamGrade() == 7);
+        REQUIRE(movedTo.getMedian() == 9.5);
+        REQUIRE(movedTo.getAverage() == 9.0);
         REQUIRE(original.getFirstName().empty());  
         REQUIRE(original.getLastName().empty());  
         REQUIRE(original.getGrades().empty());     
